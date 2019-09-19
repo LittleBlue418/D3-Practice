@@ -6,5 +6,8 @@ var svg = d3.select("#barChartDiv").append("svg")
 
 svg.selectAll("rect")
   .data(dataArray)
-  .enter()
-  .append("rect");
+  .enter().append("rect")
+      .attr("height","200")
+      .attr("width","50")
+      .attr("x","20")
+      .attr("y","100")
