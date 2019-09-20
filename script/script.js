@@ -10,7 +10,7 @@ svg.selectAll("rect")
   .enter().append("rect")
   .attr("height", function (d, i) { return d; })
   .attr("width", "50")
-  .attr("x", function (d, i) { return 10+(60 * i); })
+  .attr("x", function (d, i) { return 10 + (60 * i); })
   .attr("y", function (d, i) { return 200 - d; })
   .attr("fill", "aqua")
 
@@ -25,11 +25,12 @@ svgC.selectAll("circle.first")
   .data(dataArray)
   .enter().append("circle")
   .attr("class", "first")
-  .attr("cx",function(d,i){
-    newCircleX += (d*6)+(i*20);
-    return newCircleX;})
-  .attr("cy","100")
-  .attr("r", function(d,i){return d*3;});
+  .attr("cx", function (d, i) {
+    newCircleX += (d * 6) + (i * 20);
+    return newCircleX;
+  })
+  .attr("cy", "100")
+  .attr("r", function (d, i) { return d * 3; });
 
 //Elipse Chart
 var svgE = d3.select("#ellipseChartDiv").append("svg")
@@ -42,9 +43,10 @@ svgE.selectAll("ellipse")
   .data(dataArray)
   .enter().append("ellipse")
   .attr("class", "second")
-  .attr("cx",function(d,i){
-    newEllipseX += (d*6)+(i*20);
-    return newEllipseX;})
-  .attr("cy","100")
-  .attr("rx", function(d,i){return d*3;})
+  .attr("cx", function (d, i) {
+    newEllipseX += (d * 6) + (i * 20);
+    return newEllipseX;
+  })
+  .attr("cy", "100")
+  .attr("rx", function (d, i) { return d * 3; })
   .attr("ry", "30")
