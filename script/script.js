@@ -67,3 +67,9 @@ svgE.selectAll("ellipse")
   .attr("rx", function (d, i) { return d * 3; })
   .attr("ry", "30")
 
+//Text
+
+svg.append("text")
+  .text("hello, world")
+  .attr("x",newLineX+120)
+  .attr("y","100");
