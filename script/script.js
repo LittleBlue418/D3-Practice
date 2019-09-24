@@ -96,3 +96,19 @@ svg.append("text")
   .style("stroke-width", "1.5")
   .attr("text-anchor", "end")
   .attr("dominant-baseline", "middle")
+
+ //Text2
+
+ var textArray = ['One', 'Two', 'Three'];
+
+svgL.append("text").selectAll("tspan")
+  .data(textArray)
+  .enter().append("tspan")
+  .text(function (d){return d;})
+  .attr("x",newLineX+220)
+  .attr("y", function (d, i){return 150+(i*30)})
+  .style("fill", "none")
+  .style("stroke", "blue")
+  .style("stroke-width", "1.5")
+  .attr("text-anchor", "start")
+  .attr("dominant-baseline", "middle");
