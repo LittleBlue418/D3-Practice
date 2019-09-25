@@ -8,6 +8,8 @@ var y = d3.scaleLinear()
             .domain([0,180])
             .range([height,0]);
 
+var yAxis = d3.axisLeft(y);
+
 var area = d3.area()
             .x(function(d,i){return i*20;})
             .y0(height)
@@ -18,3 +20,6 @@ var svg = d3.select("body").append("svg")
             .attr("width", "100%");
 
 svg.append("path").attr("d", area(dataArray));
+
+svg.append("g").attr("class", "axis y").call(yAxis)
+            .attr("transform","translate(50,40)");
